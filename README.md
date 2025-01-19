@@ -1,3 +1,3 @@
-# retail_sync
+# RETAILSYNC
 
 A new Flutter project.
