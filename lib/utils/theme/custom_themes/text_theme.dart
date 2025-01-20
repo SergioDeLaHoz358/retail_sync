@@ -6,7 +6,9 @@ class TTextTheme {
   static TextTheme lightTextTheme = TextTheme(
       //Tittle H1 H2 H3
       headlineLarge: const TextStyle().copyWith(
-          fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.white),
+          fontSize: 34.0,
+          fontWeight: FontWeight.w700,
+          color: const Color.fromARGB(255, 252, 187, 107)),
       headlineMedium: const TextStyle().copyWith(
           fontSize: 24.0,
           fontWeight: FontWeight.bold,
@@ -33,18 +35,18 @@ class TTextTheme {
       labelLarge: const TextStyle().copyWith(
           fontSize: 14.0, fontWeight: FontWeight.normal, color: Colors.black),
       labelMedium: const TextStyle().copyWith(
-          fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.black),
+          fontSize: 12.0, fontWeight: FontWeight.w700, color: Colors.black),
       //body
       bodyLarge: const TextStyle().copyWith(
-          fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black),
+          fontSize: 18.0, fontWeight: FontWeight.w500, color: Colors.black),
       bodyMedium: const TextStyle().copyWith(
-          fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.black),
+          fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.black),
       bodySmall: const TextStyle().copyWith(
           fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.black));
 
   static TextTheme darkTextTheme = TextTheme(
       headlineLarge: const TextStyle().copyWith(
-          fontSize: 32.0, fontWeight: FontWeight.bold, color: Colors.white),
+          fontSize: 34.0, fontWeight: FontWeight.w700, color: Colors.white),
       headlineMedium: const TextStyle().copyWith(
           fontSize: 24.0,
           fontWeight: FontWeight.bold,
@@ -74,9 +76,9 @@ class TTextTheme {
           fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.black),
       //body
       bodyLarge: const TextStyle().copyWith(
-          fontSize: 12.0, fontWeight: FontWeight.w500, color: Colors.black),
+          fontSize: 18.0, fontWeight: FontWeight.w500, color: Colors.white),
       bodyMedium: const TextStyle().copyWith(
-          fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.black),
+          fontSize: 14.0, fontWeight: FontWeight.normal, color: Colors.white),
       bodySmall: const TextStyle().copyWith(
-          fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.black));
+          fontSize: 12.0, fontWeight: FontWeight.normal, color: Colors.white));
 }
