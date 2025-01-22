@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'package:retail_sync/features/authentication/controllers/onboarding/onboarding_controller.dart';
+import 'package:retail_sync/features/authentication/pages/onboarding/onboarding_dot_navigation.dart';
+import 'package:retail_sync/features/authentication/pages/onboarding/onboarding_next_button.dart';
+import 'package:retail_sync/features/authentication/pages/onboarding/onboarding_page.dart';
+import 'package:retail_sync/features/authentication/pages/onboarding/onboarding_skip.dart';
+
 import 'package:retail_sync/utils/constants/image_string.dart';
-import 'package:retail_sync/utils/helpers/helper_functions.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnboardingController());
     return Scaffold(
       body: Stack(
         children: [
-          //Horizontal Scrollables Pages
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: [
               OnboardingPage(
                 image: CImages.onboarding_2,
@@ -33,49 +42,12 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ],
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class OnboardingPage extends StatelessWidget {
-  const OnboardingPage({
-    super.key,
-    required this.image,
-    required this.title,
-    required this.subTitle,
-  });
-
-  final String image, title, subTitle;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: Column(
-        children: [
-          SizedBox(height: 60),
-          Image(
-            width: HHelperFunctions.screenHeight() * 0.8,
-            height: HHelperFunctions.screenHeight() * 0.5,
-            image: AssetImage(image),
-          ),
-          Text(
-            // 'Escoge tu producto',
-            title,
-            style: Theme.of(context)
-                .textTheme
-                .headlineLarge
-                ?.copyWith(fontWeight: FontWeight.bold),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(height: 15),
-          Text(
-              // 'Facilitamos la busqueda de productos y ventas en tiendas\nTu producto perfecto te espera',
-              subTitle,
-              style: Theme.of(context).textTheme.bodyMedium,
-              textAlign: TextAlign.center),
-          SizedBox(height: 16.0),
+          //Skip button
+          const OnBoardingWidget(),
+          //Dot indicator
+          const OnBoardingDotNavigation(),
+          //Circular Button
+          OnBoardingNextButton(),
         ],
       ),
     );
