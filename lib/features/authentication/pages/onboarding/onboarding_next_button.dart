@@ -19,11 +19,18 @@ class OnBoardingNextButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: () => OnboardingController.instance.nextPage(),
         style: ElevatedButton.styleFrom(
-          backgroundColor: dark ? CColors.primaryTextColor : CColors.dark,
+          backgroundColor: dark ? Colors.transparent : CColors.buttonSecondary,
           shape: const CircleBorder(),
           padding: const EdgeInsets.all(4),
+          elevation: 1,
+          shadowColor: Colors.transparent,
+        ).copyWith(
+          side:
+              WidgetStateProperty.all(BorderSide.none), // Quita cualquier borde
+          overlayColor: WidgetStateProperty.all(CColors
+              .buttonTertiary), // Evita el efecto azul al presionar o enfocar
         ),
-        child: Icon(Iconsax.arrow_right_3),
+        child: Icon(Iconsax.arrow_right_3, color: CColors.primaryTextColor),
       ),
     );
   }

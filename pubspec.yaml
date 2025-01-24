@@ -37,6 +37,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/logos/logo.png
+    - assets/logos/
     - assets/fonts/
     - assets/videos/
     - assets/images/on_boarding_images/

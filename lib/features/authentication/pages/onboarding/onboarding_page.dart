@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:retail_sync/utils/constants/colors.dart';
 import 'package:retail_sync/utils/helpers/helper_functions.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -25,10 +26,10 @@ class OnboardingPage extends StatelessWidget {
           Text(
             // 'Escoge tu producto',
             title,
-            style: Theme.of(context)
-                .textTheme
-                .headlineLarge
-                ?.copyWith(fontWeight: FontWeight.bold),
+            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: CColors.primaryColor,
+                ),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 15),

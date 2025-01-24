@@ -23,7 +23,7 @@ class CColors {
 
   // App Background Colors
   static const Color light = Colors.white;
-  static const Color dark = Color.fromRGBO(57, 46, 44, 0.603);
+  static const Color dark = Color.fromARGB(255, 57, 46, 44);
 
   // Button Colors
   static const Color buttonPrimary = Color.fromRGBO(252, 187, 107, 100);
